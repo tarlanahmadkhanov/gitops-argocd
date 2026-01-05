@@ -7,13 +7,13 @@ spec:
   project: default
 
   source:
-    repoURL: git@github.com:tarlanahmadkhanov/gitops-argocd.git
+    repoURL: https://github.com/tarlanahmadkhanov/gitops-argocd.git
     targetRevision: main
     path: apps/onboarding
 
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: test-env
 
   syncPolicy:
     automated:
