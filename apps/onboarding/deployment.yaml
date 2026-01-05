@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: onboarding
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: onboarding
+  template:
+    metadata:
+      labels:
+        app: onboarding
+    spec:
+      containers:
+        - name: app
+          image: tarlanahmadkhanov/onboarding:latest
+          ports:
+            - containerPort: 8080
